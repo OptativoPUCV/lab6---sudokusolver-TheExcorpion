@@ -54,14 +54,11 @@ List* get_adj_nodes(Node* n) {
         for (int j = 0; j < 9; j++) {
             if (n->sudo[i][j] == 0) {
                 for (int num = 1; num <= 9; num++) {
-                    // Crear un nuevo nodo y copiar el contenido del nodo original
                     Node* new_node = copy(n);
-                    // Asignar el número actual en la posición (i, j)
                     new_node->sudo[i][j] = num;
-                    // Agregar este nuevo nodo a la lista de nodos adyacentes
                     pushBack(adj_nodes, new_node);
                 }
-                // Una vez que se encuentre un espacio en blanco, no hay necesidad de seguir probando números
+
                 break;
             }
         }
