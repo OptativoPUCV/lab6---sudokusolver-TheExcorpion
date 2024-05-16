@@ -49,6 +49,7 @@ int is_valid(Node *n) {
     for (int j = 0; j < 9; j++) {
       int num = n->sudo[i][j];
       if (num != 0 && seen[num]) {
+        printf("Invalid row: %d\n", i);
         return 0; // If the number is repeated in this row, the Sudoku is invalid
       }
       seen[num] = 1;
@@ -61,6 +62,7 @@ int is_valid(Node *n) {
     for (int i = 0; i < 9; i++) {
       int num = n->sudo[i][j];
       if (num != 0 && seen[num]) {
+        printf("Invalid column: %d\n", j);
         return 0; // If the number is repeated in this column, the Sudoku is invalid
       }
       seen[num] = 1;
@@ -75,6 +77,7 @@ int is_valid(Node *n) {
         for (int dj = 0; dj < 3; dj++) {
           int num = n->sudo[i + di][j + dj];
           if (num != 0 && seen[num]) {
+            printf("Invalid subgrid: %d %d\n", i, j);
             return 0; // If the number is repeated in this subgrid, the Sudoku is invalid
           }
           seen[num] = 1;
@@ -85,6 +88,7 @@ int is_valid(Node *n) {
 
   return 1; // If all checks pass, the Sudoku is valid
 }
+
 
 List *get_adj_nodes(Node *n) {
   List *adj_nodes = createList();
@@ -97,6 +101,7 @@ List *get_adj_nodes(Node *n) {
           if (is_valid(new_node)) { // Call is_valid and check its return value
             pushBack(adj_nodes, new_node);
           } else {
+            printf("Invalid node generated\n");
             free(new_node); // Free memory if the node is not valid
           }
         }
