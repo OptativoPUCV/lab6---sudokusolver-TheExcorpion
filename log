@@ -22,3 +22,18 @@ test.c:180:8: error: implicit declaration of function ‘is_final’ [-Werror=im
 cc1: all warnings being treated as errors
 Compilation failed
 96e59ce
+Thu 16 May 2024 04:08:21 PM UTC: 
+ sudoku.c | 17 +++++------------
+ 1 file changed, 5 insertions(+), 12 deletions(-)
+In file included from test.c:5:
+sudoku.c: In function ‘get_adj_nodes’:
+sudoku.c:55:15: error: the address of ‘is_valid’ will always evaluate as ‘true’ [-Werror=address]
+   55 |           if (is_valid)
+      |               ^~~~~~~~
+test.c: In function ‘test_isfinal’:
+test.c:180:8: error: implicit declaration of function ‘is_final’ [-Werror=implicit-function-declaration]
+  180 |     if(is_final(initial)){
+      |        ^~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+2937081
