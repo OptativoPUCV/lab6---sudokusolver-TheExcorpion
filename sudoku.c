@@ -108,9 +108,6 @@ List *get_adj_nodes(Node *n) {
 }
 
 
-  return adj_nodes;
-}
-
 Node *DFS(Node *initial, int *cont) { return NULL; }
 
 /*

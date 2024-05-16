@@ -54,3 +54,13 @@ test.c:180:8: error: implicit declaration of function ‘is_final’ [-Werror=im
 cc1: all warnings being treated as errors
 Compilation failed
 92bb1d7
+Thu 16 May 2024 04:10:09 PM UTC: 
+ sudoku.c | 3 ---
+ 1 file changed, 3 deletions(-)
+test.c: In function ‘test_isfinal’:
+test.c:180:8: error: implicit declaration of function ‘is_final’ [-Werror=implicit-function-declaration]
+  180 |     if(is_final(initial)){
+      |        ^~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+c02972e
