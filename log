@@ -37,3 +37,20 @@ test.c:180:8: error: implicit declaration of function ‘is_final’ [-Werror=im
 cc1: all warnings being treated as errors
 Compilation failed
 2937081
+Thu 16 May 2024 04:09:55 PM UTC: 
+ sudoku.c | 56 +++++++++++++++++++++++++++++++++++++++++++++++++++-----
+ 1 file changed, 51 insertions(+), 5 deletions(-)
+In file included from test.c:5:
+sudoku.c:111:3: error: expected identifier or ‘(’ before ‘return’
+  111 |   return adj_nodes;
+      |   ^~~~~~
+sudoku.c:112:1: error: expected identifier or ‘(’ before ‘}’ token
+  112 | }
+      | ^
+test.c: In function ‘test_isfinal’:
+test.c:180:8: error: implicit declaration of function ‘is_final’ [-Werror=implicit-function-declaration]
+  180 |     if(is_final(initial)){
+      |        ^~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+92bb1d7
