@@ -2,7 +2,6 @@
 #include <stdlib.h>
 #include "list.h"
 
-
 typedef struct{
    int sudo[9][9];
 }Node;
@@ -44,6 +43,7 @@ void print_node(Node* n){
 }
 
 int is_valid(Node* n){
+   
 
     return 1;
 }
