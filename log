@@ -107,3 +107,16 @@ sudoku.c:86:1: error: control reaches end of non-void function [-Werror=return-t
 cc1: all warnings being treated as errors
 Compilation failed
 ad8692a
+Thu 16 May 2024 04:14:26 PM UTC: 
+ sudoku.c | 1 +
+ 1 file changed, 1 insertion(+)
+In file included from test.c:5:
+sudoku.c: In function ‘is_final’:
+sudoku.c:86:11: error: expected ‘;’ before ‘}’ token
+   86 |   return 1
+      |           ^
+      |           ;
+   87 | }
+      | ~          
+Compilation failed
+e6c6103
