@@ -83,7 +83,7 @@ List* get_adj_nodes(Node* n) {
 
 
 int is_final(Node* n) {
-  return 1
+  return 1;
 }
 
 Node* DFS(Node* initial, int* cont) {
